@@ -37,7 +37,7 @@ module.exports = class extends Generator {
     );
     */
 
-    // generate tools
+    // copy template file
     this.fs.copyTpl(this.templatePath("**/**"), this.destinationPath());
 
     // this.fs.copyTpl(
