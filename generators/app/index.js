@@ -12,7 +12,6 @@ module.exports = class extends Generator {
 
   creating() {
     // generate package.json
-    /*
     this.fs.copyTpl(
       this.templatePath("package.json"),
       this.destinationPath("package.json"),
@@ -20,22 +19,23 @@ module.exports = class extends Generator {
     );
     this.npmInstall(
       [
+        "@babel/core",
+        "@babel/plugin-transform-react-jsx",
+        "babel-loader",
+        "css-loader",
         "webpack",
         "webpack-cli",
         "webpack-dev-server",
-        "babel-loader",
-        "@babel/core",
         "@babel/preset-env",
-        "@babel/plugin-transform-react-jsx",
-        "mocha",
         "@babel/register",
+        "mocha",
         "nyc",
+        "css",
       ],
       {
         "save-dev": true,
       }
     );
-    */
 
     // copy template file
     this.fs.copyTpl(this.templatePath("**/**"), this.destinationPath());
