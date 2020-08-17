@@ -31,6 +31,7 @@ module.exports = class extends Generator {
         "mocha",
         "nyc",
         "css",
+        "html-webpack-plugin",
       ],
       {
         "save-dev": true,

@@ -1,3 +1,4 @@
+var HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: "./main.js",
   module: {
@@ -27,5 +28,6 @@ module.exports = {
       },
     ],
   },
+  plugins: [new HtmlWebpackPlugin()],
   mode: "development",
 };

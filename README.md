@@ -1,3 +1,7 @@
 # Toy Tool
 
-install process please refer to generator-frank
+一般的，我们会在初始化阶段就将各个阶段的工具集成进工具链中。
+
+1. 生成 `package.json`
+2. 安装依赖。
+3. 复制模板
