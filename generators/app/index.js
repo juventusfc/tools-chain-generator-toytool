@@ -12,6 +12,7 @@ module.exports = class extends Generator {
 
   creating() {
     // generate package.json
+    /*
     this.fs.copyTpl(
       this.templatePath("package.json"),
       this.destinationPath("package.json"),
@@ -34,12 +35,11 @@ module.exports = class extends Generator {
         "save-dev": true,
       }
     );
+    */
 
-    // generate lib
-    this.fs.copyTpl(
-      this.templatePath("lib/sum"),
-      this.destinationPath("lib/sum")
-    );
+    // generate tools
+    this.fs.copyTpl(this.templatePath("**/**"), this.destinationPath());
+
     // this.fs.copyTpl(
     //   this.templatePath("index.html"),
     //   this.destinationPath("public/index.html"),
